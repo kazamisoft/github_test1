@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <RootNamespace>TabStripDemo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 설치된 DevExpress 버전에 맞춰 Version을 고정하세요 (예: 24.2.6). -->
+    <PackageReference Include="DevExpress.Win" Version="24.2.*" />
+  </ItemGroup>
+
+</Project>
