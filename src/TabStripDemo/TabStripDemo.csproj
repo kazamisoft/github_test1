@@ -2,16 +2,22 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <UseWindowsForms>true</UseWindowsForms>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <TargetFramework>net48</TargetFramework>
+    <!-- 기존 .NET Framework 프로젝트 기본값과 같은 C# 7.3 으로 고정 (Controls 폴더를 그대로 복사해 쓸 수 있게) -->
+    <LangVersion>7.3</LangVersion>
     <RootNamespace>TabStripDemo</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- 설치된 DevExpress 버전에 맞춰 Version을 고정하세요 (예: 24.2.6). -->
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- DevExpress 설치 시 생기는 로컬 NuGet 소스(DevExpress 24.x Local) 또는 DevExpress NuGet 피드 사용.
+         설치된 버전으로 고정하세요 (예: 24.1.7, 24.2.6). -->
     <PackageReference Include="DevExpress.Win" Version="24.2.*" />
   </ItemGroup>
 
